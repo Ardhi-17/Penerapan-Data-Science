@@ -82,14 +82,78 @@ Dashboard ini dibuat untuk menganalisis data karyawan dan memantau faktor-faktor
 - Karyawan dengan gaji lebih rendah cenderung lebih sering keluar.
 - Lembur berkorelasi signifikan terhadap keputusan keluar dari perusahaan.
 
-- 
 ## Conclusion
 
-Jelaskan konklusi dari proyek yang dikerjakan.
+Proyek ini telah berhasil memberikan solusi komprehensif terhadap tantangan tingginya attrition rate di perusahaan Jaya Jaya Maju dengan pendekatan data-driven yang terintegrasi melalui dashboard interaktif. Melalui analisis eksploratif pada berbagai dimensi karyawan, diperoleh sejumlah karakteristik penting yang menunjukkan korelasi kuat terhadap kemungkinan keluar dari perusahaan.
+## ✅ Konklusi Proyek – HR Attrition Analysis di Jaya Jaya Maju
+
+Proyek ini telah berhasil memberikan solusi komprehensif terhadap tantangan tingginya **attrition rate di perusahaan Jaya Jaya Maju** dengan pendekatan data-driven yang terintegrasi melalui dashboard interaktif. Melalui analisis eksploratif pada berbagai dimensi karyawan, diperoleh sejumlah karakteristik penting yang menunjukkan korelasi kuat terhadap kemungkinan keluar dari perusahaan.
+
+---
+
+### 🎯 Karakteristik Karyawan yang Cenderung Mengalami Attrition
+
+1. **Pendapatan Rendah**  
+   Rata-rata karyawan yang keluar memiliki gaji bulanan (**Monthly Income**) yang lebih rendah dibandingkan karyawan yang bertahan (± USD 4.872 vs USD 6.982.). Hal ini menegaskan bahwa **kompensasi** merupakan faktor signifikan dalam keputusan keluar.
+
+2. **Usia Produktif Awal (28–37 tahun)**  
+   Karyawan dengan rentang usia **28–37 tahun** menunjukkan tingkat attrition tertinggi dalam populasi, diduga karena masa tersebut merupakan fase karir aktif di mana peluang eksternal sering dicari.
+
+3. **Lembur Tinggi (OverTime: Yes)**  
+   Karyawan yang **melakukan lembur** memiliki angka attrition yang lebih tinggi dibandingkan yang tidak lembur. Ini mengindikasikan adanya tekanan kerja dan potensi ketidakseimbangan kehidupan kerja yang memicu keputusan resign.
+
+4. **Masa Kerja Pendek (Years at Company: 0–5 tahun)**  
+   Sebagian besar attrition berasal dari karyawan yang bekerja **kurang dari 5 tahun**. Ini menunjukkan potensi masalah pada fase orientasi, adaptasi awal, atau kurangnya peluang karir di tahap awal kerja.
+
+5. **Departemen Tertentu Lebih Rentan**  
+   Departemen **Research & Development** dan **Sales** menyumbang jumlah attrition tertinggi, yang mengindikasikan bahwa beban kerja, dinamika tim, atau ekspektasi jabatan di departemen tersebut perlu dikaji lebih dalam.
+
+6. **Distribusi Berdasarkan Gender**  
+   Dari total karyawan yang keluar, **60.3% adalah pria**, namun karena distribusi gender karyawan juga didominasi pria, hal ini menunjukkan bahwa rasio attrition antara pria dan wanita relatif seimbang jika dibandingkan secara proporsional.
+
+---
+**Peran Model Prediktif (Machine Learning)**
+
+Model prediktif berbasis machine learning yang dibangun sebagai bagian dari proyek ini menunjukkan efektivitas dalam mengidentifikasi **karyawan berisiko tinggi untuk keluar**. Dengan mempertimbangkan variabel seperti **usia, gaji, overtime, masa kerja, dan departemen**,dan lain lain model mampu memberi estimasi probabilitas attrition yang dapat diintegrasikan ke sistem monitoring HR.
+---
+
+- **Jenis model**: Logistic Regression
+- **Fitur input utama**:
+  - Usia
+  - Gender
+  - Gaji Bulanan
+  - Overtime
+  - Tahun di Perusahaan
+  - JobSatisfaction
+- **Akurasi model**: >85% pada data uji
+- **Fungsi model**: Memprediksi kemungkinan seorang karyawan keluar dari perusahaan
+
+---
+
+**💼 Dampak Bisnis**
+Dengan insight dari dashboard dan akurasi prediksi yang baik, HR kini memiliki kemampuan untuk:
+
+- Menjalankan **intervensi proaktif** untuk karyawan berisiko tinggi
+- Menyusun strategi **retensi berbasis data** seperti peningkatan kompensasi, review beban kerja, dan peningkatan engagement
+- Mengurangi biaya turnover dan mempertahankan **stabilitas tim kerja**
+- Meningkatkan efektivitas perencanaan SDM dan **kebijakan berbasis bukti**
+
+
 
 ### Rekomendasi Action Items (Optional)
 
-Berikan beberapa rekomendasi action items yang harus dilakukan perusahaan guna menyelesaikan permasalahan atau mencapai target mereka.
+Berikut adalah beberapa rekomendasi strategis yang dapat dilakukan oleh perusahaan Jaya Jaya Maju untuk mengurangi tingkat attrition dan meningkatkan retensi karyawan:
 
-- action item 1
-- action item 2
+- **Melakukan review dan penyesuaian struktur kompensasi**, khususnya bagi karyawan dengan gaji di bawah rata-rata, untuk meningkatkan kepuasan dan loyalitas kerja.
+
+- **Mengatur ulang kebijakan lembur dan keseimbangan kerja-hidup**, termasuk evaluasi beban kerja, rotasi tugas, dan waktu istirahat, guna mencegah burnout.
+
+- **Merancang program onboarding dan pengembangan karir yang lebih kuat** bagi karyawan baru dan karyawan dengan masa kerja <5 tahun, agar mereka merasa memiliki masa depan jelas di perusahaan.
+
+- **Meningkatkan keterlibatan manajerial**, dengan pelatihan bagi atasan langsung agar dapat membina hubungan kerja yang sehat dan mendukung pertumbuhan bawahannya.
+
+- **Mengadakan exit interview secara sistematis**, untuk menggali alasan aktual karyawan keluar dan menjadikannya dasar kebijakan HR berbasis bukti.
+
+- **Menggunakan model prediksi attrition secara berkelanjutan**, agar HR dapat mengidentifikasi karyawan berisiko tinggi secara dini dan melakukan pendekatan personal.
+
+
