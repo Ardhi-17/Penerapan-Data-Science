@@ -147,7 +147,7 @@ Proyek ini telah berhasil memberikan solusi komprehensif terhadap tantangan ting
 **Peran Model Prediktif (Machine Learning)**
 
 Model yang dipakai adalah Logistic Regression, yaitu model klasifikasi biner yang cocok untuk memprediksi apakah seorang karyawan akan keluar dari perusahaan (attrition = 1) atau tidak (attrition = 0).
----
+
 Berikut performa dari model machine learning yang dibangun : 
 
 | Metrik                  | Nilai |
