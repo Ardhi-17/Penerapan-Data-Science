@@ -33,14 +33,49 @@ Terakhir, Kita akan memberikan beberapa rekomendasi kepada perusahaan edutech be
 Dataset yang dimanfaatkan berasal dari Jaya Jaya Maju, sebuah perusahaan multinasional yang telah beroperasi sejak tahun 2000 dan memiliki lebih dari 1.000 karyawan di berbagai lokasi. Data ini berisi informasi terkait demografi dan pekerjaan karyawan, seperti umur, gaji, lama bekerja, serta status pekerjaan. Dataset tersebut digunakan untuk menganalisis faktor-faktor yang berkontribusi terhadap tingkat attrition (pengunduran diri karyawan) di perusahaan.
 
 Dataset dapat diakses melalu tautan berikut : [Data Karyawan Jaya Jaya Maju](https://github.com/dicodingacademy/dicoding_dataset/tree/main/employee)
-Setup environment:
+
+Proyek ini memerlukan lingkungan Python 3.8+ untuk menjalankan analisis data dan model machine learning, serta Docker untuk menjalankan dashboard Metabase.
+
+**Setup environment :**
+```
+python -m venv venv
+source venv/bin/activate        # Linux/Mac
+venv\Scripts\activate           # Windows
 
 ```
 
+**Install semua dependencies dengan file requirements.txt menggunakan :**
 ```
+pip install -r requirements.txt
+```
+
+**Menjalankan Analisis :**
+1. Pastikan semua dependensi telah terinstal dengan benar.
+2. Jalankan file notebook.ipynb menggunakan Jupyter Notebook atau Google Colab.
+3. Notebook mencakup:
+   - Exploratory Data Analysis (EDA)
+   - Preprocessing dan pembersihan data
+   - Training model Logistic Regression
+   - Evaluasi performa model
+   - Menyimpan model ke dalam file .pkl
+
+**Menjalankan Dashboard**
+**Dashboard dapat dijalankan melalui tautan yang ada pada bagian Business Dashboard**
+Gunakan kredensial login berikut untuk akses awal:
+- Email: root@mail.com
+- Password: root123
 
 ## Business Dashboard
 Dashboard ini dibuat untuk menganalisis data karyawan dan memantau faktor-faktor utama yang mempengaruhi tingginya attrition rate (tingkat pergantian karyawan) di perusahaan fiktif Jaya Jaya Maju. Visualisasi ini dirancang menggunakan Metabase yang terkoneksi dengan database PostgreSQL Supabase, dan dijalankan melalui Docker.
+
+Dashboard interaktif dapat langsung diakses melalui link berikut:
+
+**http://localhost:3000/public/dashboard/dc53ee1f-3602-4514-b56b-d4371a66c48a**
+
+(Jalankan Metabase via docker untuk melihat dashboard)
+Gunakan kredensial login berikut untuk akses awal:
+- Email: root@mail.com
+- Password: root123
 
 **Tujuan Dashboard**
 - Memberikan gambaran cepat tentang kondisi karyawan.
@@ -84,14 +119,11 @@ Dashboard ini dibuat untuk menganalisis data karyawan dan memantau faktor-faktor
 
 ## Conclusion
 
-Proyek ini telah berhasil memberikan solusi komprehensif terhadap tantangan tingginya attrition rate di perusahaan Jaya Jaya Maju dengan pendekatan data-driven yang terintegrasi melalui dashboard interaktif. Melalui analisis eksploratif pada berbagai dimensi karyawan, diperoleh sejumlah karakteristik penting yang menunjukkan korelasi kuat terhadap kemungkinan keluar dari perusahaan.
-## ✅ Konklusi Proyek – HR Attrition Analysis di Jaya Jaya Maju
-
 Proyek ini telah berhasil memberikan solusi komprehensif terhadap tantangan tingginya **attrition rate di perusahaan Jaya Jaya Maju** dengan pendekatan data-driven yang terintegrasi melalui dashboard interaktif. Melalui analisis eksploratif pada berbagai dimensi karyawan, diperoleh sejumlah karakteristik penting yang menunjukkan korelasi kuat terhadap kemungkinan keluar dari perusahaan.
 
 ---
 
-### 🎯 Karakteristik Karyawan yang Cenderung Mengalami Attrition
+**Karakteristik Karyawan yang Cenderung Mengalami Attrition**
 
 1. **Pendapatan Rendah**  
    Rata-rata karyawan yang keluar memiliki gaji bulanan (**Monthly Income**) yang lebih rendah dibandingkan karyawan yang bertahan (± USD 4.872 vs USD 6.982.). Hal ini menegaskan bahwa **kompensasi** merupakan faktor signifikan dalam keputusan keluar.
@@ -114,23 +146,19 @@ Proyek ini telah berhasil memberikan solusi komprehensif terhadap tantangan ting
 ---
 **Peran Model Prediktif (Machine Learning)**
 
-Model prediktif berbasis machine learning yang dibangun sebagai bagian dari proyek ini menunjukkan efektivitas dalam mengidentifikasi **karyawan berisiko tinggi untuk keluar**. Dengan mempertimbangkan variabel seperti **usia, gaji, overtime, masa kerja, dan departemen**,dan lain lain model mampu memberi estimasi probabilitas attrition yang dapat diintegrasikan ke sistem monitoring HR.
+Model yang dipakai adalah Logistic Regression, yaitu model klasifikasi biner yang cocok untuk memprediksi apakah seorang karyawan akan keluar dari perusahaan (attrition = 1) atau tidak (attrition = 0).
 ---
+Berikut performa dari model machine learning yang dibangun : 
 
-- **Jenis model**: Logistic Regression
-- **Fitur input utama**:
-  - Usia
-  - Gender
-  - Gaji Bulanan
-  - Overtime
-  - Tahun di Perusahaan
-  - JobSatisfaction
-- **Akurasi model**: >85% pada data uji
-- **Fungsi model**: Memprediksi kemungkinan seorang karyawan keluar dari perusahaan
+| Metrik                  | Nilai |
+|-------------------------|-------|
+| **Recall (positif)**    | 0.75  |
+| **F1-Score**            | 0.504 |
+| **ROC AUC**             | 0.82  |
+| **Akurasi**             | 75%   |
+| **Precision (positif)** | 0.38  |
 
----
-
-**💼 Dampak Bisnis**
+**Dampak Bisnis**
 Dengan insight dari dashboard dan akurasi prediksi yang baik, HR kini memiliki kemampuan untuk:
 
 - Menjalankan **intervensi proaktif** untuk karyawan berisiko tinggi
@@ -139,21 +167,14 @@ Dengan insight dari dashboard dan akurasi prediksi yang baik, HR kini memiliki k
 - Meningkatkan efektivitas perencanaan SDM dan **kebijakan berbasis bukti**
 
 
-
 ### Rekomendasi Action Items (Optional)
 
 Berikut adalah beberapa rekomendasi strategis yang dapat dilakukan oleh perusahaan Jaya Jaya Maju untuk mengurangi tingkat attrition dan meningkatkan retensi karyawan:
-
 - **Melakukan review dan penyesuaian struktur kompensasi**, khususnya bagi karyawan dengan gaji di bawah rata-rata, untuk meningkatkan kepuasan dan loyalitas kerja.
-
 - **Mengatur ulang kebijakan lembur dan keseimbangan kerja-hidup**, termasuk evaluasi beban kerja, rotasi tugas, dan waktu istirahat, guna mencegah burnout.
-
 - **Merancang program onboarding dan pengembangan karir yang lebih kuat** bagi karyawan baru dan karyawan dengan masa kerja <5 tahun, agar mereka merasa memiliki masa depan jelas di perusahaan.
-
 - **Meningkatkan keterlibatan manajerial**, dengan pelatihan bagi atasan langsung agar dapat membina hubungan kerja yang sehat dan mendukung pertumbuhan bawahannya.
-
 - **Mengadakan exit interview secara sistematis**, untuk menggali alasan aktual karyawan keluar dan menjadikannya dasar kebijakan HR berbasis bukti.
-
 - **Menggunakan model prediksi attrition secara berkelanjutan**, agar HR dapat mengidentifikasi karyawan berisiko tinggi secara dini dan melakukan pendekatan personal.
 
 
